@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #023190dd;
+            display: flex;
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh;
+            margin: 0;
+        }
+        .image-container {
+            flex: 1; /* Espaço para a imagem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container img {
+            max-width: 100%; /* Ajusta a imagem */
+            height: auto;
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px; /* Espaço à direita */
+        }
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://s1.cdn.autoevolution.com/images/news/gallery/porsche-911-turbo-s-makes-more-power-than-a-veyron-spits-flames-on-the-dyno_6.jpg" alt="Descrição da Imagem">
+    </div>
+    <div class="form-container">
+        <h2>Agendamento Online</h2>
+        <label for="nomeInput">Nome</label><br>
+        <input type="text" id="nomeInput"><br><br>
+        <label for="emailInput">Email</label><br>
+        <input type="email" id="emailInput"><br><br>
+        <button id="agendarBtn">Agendar</button>
+    </div>
+    <script>
+        document.getElementById('agendarBtn').addEventListener('click', function() {
+            const nome = document.getElementById('nomeInput').value;
+            const email = document.getElementById('emailInput').value;
+            
+            if (nome && email) {
+                alert(`Agendamento realizado com sucesso para ${nome} no email ${email}.`);
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    </script>
+</body>
+</html>

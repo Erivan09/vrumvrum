@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #370442;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: auto; /* Altura automática */
+            margin: 0;
+            padding: 20px;
+        }
+        .service-container {
+            display: flex;
+            justify-content: space-between; /* Espaçamento entre os serviços */
+            width: 80%; /* Largura do contêiner */
+        }
+        .service-box {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%; /* Largura de cada serviço */
+        }
+        img {
+            max-width: 100%; /* Ajusta a imagem */
+            height: auto;
+            border-radius: 5px; /* Bordas arredondadas */
+        }
+        button {
+            background-color: #370442;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #370442;
+        }
+        .arrow {
+            display: block;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #370442;
+        }
+        .details {
+            display: none; /* Escondido por padrão */
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleDetails(serviceId) {
+            const details = document.getElementById(serviceId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="service-container">
+        <div class="service-box">
+            <img src="https://madeforstreet.com.br/wp-content/uploads/2021/02/O-que-e-remap-ecu-MadeForStreet1-775x500.jpg" alt="Remapeamento automotivo">
+            <button onclick="alert('Você selecionou o Serviço 1!')">Serviço 1</button>
+            <span class="arrow" onclick="toggleDetails('details1')">→</span>
+            <div id="details1" class="details">
+                <p>Nesse teste, conectamos uma interface à GPU do carro e conseguimos melhorar vários pontos do seu veículo. Desligamos limitadores, enriquecemos a mistura de combustível e oxigênio, remapeamos o câmbio(se for automatico) e, assim, melhoramos sua performance, ampliando as faixas de torque do seu automóvel. </p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSs_4qOA2Yi_bZD0-i9ejiWt0T2Y-rnmVQyqmBeHz8_148Arz1U" alt="Preparação automotiva">
+            <button onclick="alert('Você selecionou o Serviço 2!')">Serviço 2</button>
+            <span class="arrow" onclick="toggleDetails('details2')">→</span>
+            <div id="details2" class="details">
+                <p>Neste serviço, realizamos a substituição de peças do seu automóvel, visando aprimorar sua performance. Ao trocar componentes essenciais, como filtros, velas de ignição e sistemas de suspensão, garantimos um funcionamento mais eficiente e responsivo do veículo. Essa atualização não apenas melhora a potência e a agilidade, mas também contribui para uma condução mais segura e confortável. Experimente a diferença que um bom serviço de manutenção pode fazer!
+
+                </p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="https://news.dupontregistry.com/wp-content/uploads/2020/04/LFA-Dyno-scaled.jpg" alt="Teste no dinamometro">
+            <button onclick="alert('Você selecionou o Serviço 3!')">Serviço 3</button>
+            <span class="arrow" onclick="toggleDetails('details3')">→</span>
+            <div id="details3" class="details">
+                <p>Junto com o remapeamento, realizamos testes práticos para analisar diversos parâmetros do motor, como a potência (cavalaria), faixa de torque, e a quantidade de oxigênio e combustível injetados. Essas medições são essenciais para entender como o veículo está se comportando em condições reais de uso. Com base nesses dados, podemos aperfeiçoar toda a performance do automóvel, ajustando a mistura de combustível e oxigênio e otimizando a resposta do motor. O resultado é um veículo mais potente, eficiente e com uma condução mais prazerosa.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
